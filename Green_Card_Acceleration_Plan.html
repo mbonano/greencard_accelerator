@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Card Acceleration Plan</title>
+<style>
+    :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --accent: #1abc9c;
+        --bg: #e9ecef;
+        --doc-bg: #ffffff;
+        --text: #333333;
+    }
+    body { 
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+        background-color: var(--bg); 
+        color: var(--text); 
+        line-height: 1.6; 
+        margin: 0; 
+        padding: 40px 20px; 
+    }
+    .document-container { 
+        max-width: 850px; 
+        margin: 0 auto; 
+        background: var(--doc-bg); 
+        padding: 50px 60px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        border-radius: 8px; 
+    }
+    .control-panel { 
+        text-align: right; 
+        margin-bottom: 30px; 
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    select { 
+        padding: 10px 15px; 
+        font-size: 16px; 
+        border-radius: 6px; 
+        border: 1px solid #ccc;
+        background-color: #f8f9fa;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .lang-section { display: none; }
+    .active-lang { display: block; }
+    
+    h1 { color: var(--primary); font-size: 2.2em; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; margin-top: 0;}
+    h2 { color: var(--primary); font-size: 1.6em; margin-top: 40px; display: flex; align-items: center; }
+    h2::before { content: "■"; color: var(--secondary); margin-right: 10px; font-size: 0.8em; }
+    h3 { color: var(--secondary); font-size: 1.3em; margin-top: 25px;}
+    
+    .timeline { font-weight: bold; color: #e67e22; background: #fdf2e9; display: inline-block; padding: 5px 12px; border-radius: 4px; font-size: 0.9em; margin-bottom: 15px;}
+    .country-strategy { background: #f4f6f7; border-left: 4px solid #95a5a6; padding: 15px; margin: 15px 0; border-radius: 0 4px 4px 0; font-style: italic;}
+    
+    .steps-container { margin: 20px 0; border-left: 2px dashed #bdc3c7; padding-left: 20px; }
+    .step { position: relative; margin-bottom: 20px; }
+    .step::before {
+        content: ""; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; 
+        background: var(--secondary); border-radius: 50%;
+    }
+    .step-title { font-weight: bold; font-size: 1.1em; color: var(--primary); margin-bottom: 5px; }
+    
+    .checklist { background: #f9fbfe; border: 1px solid #e1e8ed; border-radius: 6px; padding: 20px; margin: 20px 0; }
+    .checklist-title { font-weight: bold; color: var(--primary); margin-bottom: 15px; margin-top: 0; font-size: 1.2em;}
+    .checklist label { display: block; margin-bottom: 10px; cursor: pointer; padding-left: 30px; text-indent: -30px;}
+    .checklist input[type="checkbox"] { width: 18px; height: 18px; vertical-align: middle; margin-right: 10px; cursor: pointer;}
+    
+    .suggestion { background: #e8f8f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 6px 6px 0; margin: 20px 0; }
+    .suggestion-title { font-weight: bold; color: #16a085; margin-top: 0; margin-bottom: 10px; font-size: 1.1em;}
+    
+    .email-template { background: #f1f2f6; padding: 20px; font-family: 'Courier New', Courier, monospace; border-radius: 6px; white-space: pre-wrap; font-size: 0.95em; border: 1px solid #dfe4ea; margin-top: 15px;}
+    
+    hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
+</style>
+<script>
+    function switchLanguage() {
+        const lang = document.getElementById('language-select').value;
+        document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active-lang'));
+        document.getElementById('content-' + lang).classList.add('active-lang');
+    }
+</script>
+</head>
+<body>
+
+<div class="document-container">
+    <div class="control-panel">
+        <label for="language-select" style="font-size: 1.1em; margin-right: 10px;">🌐 Language / Idioma / Язык:</label>
+        <select id="language-select" onchange="switchLanguage()">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- ENGLISH SECTION                                -->
+    <!-- ============================================== -->
+    <div id="content-en" class="lang-section active-lang">
+        <h1>Green Card Acceleration Plan</h1>
+        <p>This document provides straightforward, step-by-step plans to fast-track your U.S. Green Card application. Follow the specific checklist and strategies for your application type.</p>
+
+        <!-- Plan 1: Employer-Sponsored -->
+        <h2>1. Employer-Sponsored Visas (EB-2 & EB-3)</h2>
+        <div class="timeline">⏳ Target Timeline: Reduced from 2-4 years to 1.5-2 years (excluding waitlist backlogs)</div>
+        
+        <div class="country-strategy">
+            <strong>🌍 Country of Origin Strategy:</strong> If you were born in India or China, your wait for a visa number can be several years. However, if your spouse was born in a "Rest of World" country (like Canada, UK, Brazil), you can use <strong>Cross-Chargeability</strong> to skip the backlog and use their country's shorter wait time instead.
+        </div>
+
+        <h3>Sequenced Steps</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Step 1: PERM Labor Certification</div>
+                Your employer proves no U.S. worker is available for your job. (Cannot be accelerated).
+            </div>
+            <div class="step">
+                <div class="step-title">Step 2: Form I-140 Petition</div>
+                Your employer files for your immigration status. <strong>(This is where we accelerate)</strong>.
+            </div>
+            <div class="step">
+                <div class="step-title">Step 3: Form I-485 Adjustment of Status</div>
+                The final green card application. Filed when your priority date is current.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Action Checklist</p>
+            <label><input type="checkbox"> Confirm your spouse's country of birth to see if you qualify for Cross-Chargeability.</label>
+            <label><input type="checkbox"> Ask your employer/HR department to file <strong>Form I-907 (Premium Processing)</strong> for your I-140.</label>
+            <label><input type="checkbox"> If the employer won't pay the $2,965 Premium fee, offer to pay it yourself.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Helpful Suggestion: Request Premium Processing</h4>
+            <p>Send this exact email to your HR representative or manager to ask for an upgrade to 15-day Premium Processing:</p>
+            <div class="email-template">Subject: Request to upgrade my I-140 to Premium Processing
+
+Dear [Manager/HR Name],
+
+I am checking on my green card application (Form I-140). Because standard processing is taking many months, I would like to request that we upgrade my application to Premium Processing (Form I-907). 
+
+This guarantees a decision in 15 days, allowing me to focus entirely on my work. If the company cannot cover the government fee, I am willing to pay it myself. Please let me know how we can coordinate this with our lawyers.
+
+Thank you,
+[Your Name]</div>
+        </div>
+
+        <hr>
+
+        <!-- Plan 2: Self-Sponsored -->
+        <h2>2. Self-Sponsored Visas (EB-1A & NIW)</h2>
+        <div class="timeline">⏳ Target Timeline: Reduced from 1-2 years to 6-8 months</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Country of Origin Strategy:</strong> For applicants from backlogged countries (India/China), achieving an EB-1A classification is the ultimate acceleration tool, bypassing the massive EB-2/EB-3 lines entirely. For "Rest of World" applicants, your visa is usually immediately available.
+        </div>
+
+        <h3>Sequenced Steps</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Step 1: Evidence Gathering</div>
+                Collect proof of your extraordinary ability or national interest project. 
+            </div>
+            <div class="step">
+                <div class="step-title">Step 2: Concurrent Filing (The Acceleration Step)</div>
+                File your I-140, I-485, and I-907 (Premium Processing) at the exact same time.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Action Checklist</p>
+            <label><input type="checkbox"> File <strong>Form I-907 Premium Processing</strong> simultaneously with your I-140 to get an answer in 15-45 days.</label>
+            <label><input type="checkbox"> Check the Visa Bulletin: If your category is "Current" (C), mail your final I-485 in the exact same package as your I-140.</label>
+            <label><input type="checkbox"> <strong>2026 Signature Check:</strong> Review every signature in black ink. As of July 2026, USCIS will instantly reject entire packages for invalid or software-generated signatures.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Helpful Suggestion: Avoid Instant Rejections</h4>
+            <p>Because you are controlling your own application, the biggest delay is making an administrative error. Before mailing, physically verify that every form is the most recent edition (check the date at the bottom of the USCIS forms) and signed by hand.</p>
+        </div>
+
+        <hr>
+
+        <!-- Plan 3: Family-Sponsored -->
+        <h2>3. Family-Sponsored Visas (Immediate Relatives)</h2>
+        <div class="timeline">⏳ Target Timeline: Reduced from 12-18 months to 8-10 months</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Country of Origin Strategy:</strong> Great news! Country limits <strong>do not apply</strong> to spouses, parents, or minor children of U.S. Citizens. Whether you are from Mexico, Philippines, India, or anywhere else, there is no line to wait in.
+        </div>
+
+        <h3>Sequenced Steps</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Step 1: Medical Exam Front-Loading</div>
+                Get your medical exam done before submitting any paperwork.
+            </div>
+            <div class="step">
+                <div class="step-title">Step 2: The "One-Step" Concurrent Filing</div>
+                File the family petition (I-130) and the green card application (I-485) together.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Action Checklist</p>
+            <label><input type="checkbox"> Complete <strong>Form I-693 (Medical Exam)</strong> with a USCIS-approved doctor and receive the sealed envelope.</label>
+            <label><input type="checkbox"> Gather all translated civil documents (birth certificate, marriage certificate). Any non-English document must have a certified translation.</label>
+            <label><input type="checkbox"> Place the sealed medical envelope and all forms (I-130, I-485, I-765, I-131) into <strong>one single mailing box</strong>.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Helpful Suggestion: "Front-Loading" is the Only Way</h4>
+            <p>You cannot buy Premium Processing for family green cards. The only way to accelerate is to give USCIS a perfect package. If you forget your medical exam, USCIS will issue a "Request for Evidence" (RFE), which pauses your case and delays your green card by 2 to 3 months.</p>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SPANISH SECTION                                -->
+    <!-- ============================================== -->
+    <div id="content-es" class="lang-section">
+        <h1>Plan de Aceleración de la Tarjeta Verde</h1>
+        <p>Este documento proporciona planes sencillos y paso a paso para acelerar su solicitud de Tarjeta Verde (Green Card) en EE. UU. Siga la lista de verificación y las estrategias específicas para su tipo de solicitud.</p>
+
+        <!-- Plan 1: Employer-Sponsored -->
+        <h2>1. Visas Patrocinadas por el Empleador (EB-2 y EB-3)</h2>
+        <div class="timeline">⏳ Tiempo Estimado: Reducido de 2-4 años a 1.5-2 años (excluyendo retrasos de lista de espera)</div>
+        
+        <div class="country-strategy">
+            <strong>🌍 Estrategia por País de Origen:</strong> Si nació en India o China, su espera puede ser de varios años. Sin embargo, si su cónyuge nació en otro país (como Colombia, España, Brasil), puede usar la <strong>Cobrabilidad Cruzada (Cross-Chargeability)</strong> para saltarse la larga fila y usar el tiempo de espera más corto de su cónyuge.
+        </div>
+
+        <h3>Pasos Secuenciales</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Paso 1: Certificación Laboral PERM</div>
+                Su empleador demuestra que no hay trabajadores en EE. UU. disponibles para su trabajo. (No se puede acelerar).
+            </div>
+            <div class="step">
+                <div class="step-title">Paso 2: Petición Formulario I-140</div>
+                Su empleador solicita su estatus migratorio. <strong>(Aquí es donde aceleramos)</strong>.
+            </div>
+            <div class="step">
+                <div class="step-title">Paso 3: Ajuste de Estatus Formulario I-485</div>
+                La solicitud final de la tarjeta verde. Se presenta cuando su fecha de prioridad está vigente.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Lista de Verificación de Acción</p>
+            <label><input type="checkbox"> Confirme el país de nacimiento de su cónyuge para ver si califica para la Cobrabilidad Cruzada.</label>
+            <label><input type="checkbox"> Pida a su empleador/Recursos Humanos que presente el <strong>Formulario I-907 (Procesamiento Premium)</strong> para su I-140.</label>
+            <label><input type="checkbox"> Si el empleador no paga la tarifa Premium de $2,965, ofrezca pagarla usted mismo.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Sugerencia Útil: Solicitar Procesamiento Premium</h4>
+            <p>Envíe este correo exacto (en inglés) a su representante de RR.HH. o gerente para pedir una actualización al Procesamiento Premium de 15 días:</p>
+            <div class="email-template">Subject: Request to upgrade my I-140 to Premium Processing
+
+Dear [Nombre del Gerente/RRHH],
+
+I am checking on my green card application (Form I-140). Because standard processing is taking many months, I would like to request that we upgrade my application to Premium Processing (Form I-907). 
+
+This guarantees a decision in 15 days, allowing me to focus entirely on my work. If the company cannot cover the government fee, I am willing to pay it myself. Please let me know how we can coordinate this with our lawyers.
+
+Thank you,
+[Su Nombre]</div>
+        </div>
+
+        <hr>
+
+        <!-- Plan 2: Self-Sponsored -->
+        <h2>2. Visas Autopatrocinadas (EB-1A y NIW)</h2>
+        <div class="timeline">⏳ Tiempo Estimado: Reducido de 1-2 años a 6-8 meses</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Estrategia por País de Origen:</strong> Para solicitantes de países con retrasos (India/China), lograr una clasificación EB-1A es la mejor herramienta de aceleración, evitando las filas masivas de EB-2/EB-3. Para los solicitantes del "Resto del Mundo", su visa generalmente está disponible de inmediato.
+        </div>
+
+        <h3>Pasos Secuenciales</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Paso 1: Recopilación de Pruebas</div>
+                Reúna pruebas de su habilidad extraordinaria o proyecto de interés nacional.
+            </div>
+            <div class="step">
+                <div class="step-title">Paso 2: Presentación Concurrente (El Paso de Aceleración)</div>
+                Presente su I-140, I-485 y I-907 (Procesamiento Premium) exactamente al mismo tiempo.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Lista de Verificación de Acción</p>
+            <label><input type="checkbox"> Presente el <strong>Formulario I-907 de Procesamiento Premium</strong> junto con su I-140 para obtener una respuesta en 15-45 días.</label>
+            <label><input type="checkbox"> Revise el Boletín de Visas: Si su categoría está "Actual" (C), envíe su I-485 final en el mismo paquete que su I-140.</label>
+            <label><input type="checkbox"> <strong>Revisión de Firmas 2026:</strong> Revise cada firma en tinta negra. A partir de julio de 2026, USCIS rechazará al instante paquetes enteros por firmas inválidas o generadas por software.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Sugerencia Útil: Evite Rechazos Instantáneos</h4>
+            <p>Debido a que usted controla su propia solicitud, el mayor retraso es cometer un error administrativo. Antes de enviar por correo, verifique físicamente que cada formulario sea la edición más reciente y esté firmado a mano.</p>
+        </div>
+
+        <hr>
+
+        <!-- Plan 3: Family-Sponsored -->
+        <h2>3. Visas Patrocinadas por la Familia (Familiares Inmediatos)</h2>
+        <div class="timeline">⏳ Tiempo Estimado: Reducido de 12-18 meses a 8-10 meses</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Estrategia por País de Origen:</strong> ¡Excelentes noticias! Los límites por país <strong>no se aplican</strong> a cónyuges, padres o hijos menores de ciudadanos estadounidenses. Ya sea de México, India o cualquier otro lugar, no hay fila de espera.
+        </div>
+
+        <h3>Pasos Secuenciales</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Paso 1: Anticipar el Examen Médico</div>
+                Hágase su examen médico antes de presentar cualquier papeleo.
+            </div>
+            <div class="step">
+                <div class="step-title">Paso 2: La Presentación Concurrente de "Un Paso"</div>
+                Presente la petición familiar (I-130) y la solicitud de tarjeta verde (I-485) juntas.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Lista de Verificación de Acción</p>
+            <label><input type="checkbox"> Complete el <strong>Formulario I-693 (Examen Médico)</strong> con un médico aprobado por USCIS y reciba el sobre sellado.</label>
+            <label><input type="checkbox"> Reúna todos los documentos civiles traducidos (acta de nacimiento, acta de matrimonio). Todo documento que no esté en inglés debe tener una traducción certificada.</label>
+            <label><input type="checkbox"> Coloque el sobre médico sellado y todos los formularios (I-130, I-485, I-765, I-131) en <strong>una sola caja de envío</strong>.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Sugerencia Útil: "Anticipar" es la Única Manera</h4>
+            <p>No se puede comprar Procesamiento Premium para tarjetas verdes familiares. La única forma de acelerar es entregar un paquete perfecto. Si olvida su examen médico, USCIS emitirá una "Solicitud de Evidencia" (RFE), lo que pausa su caso y retrasa su tarjeta verde por 2 a 3 meses.</p>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- RUSSIAN SECTION                                -->
+    <!-- ============================================== -->
+    <div id="content-ru" class="lang-section">
+        <h1>План ускоренного получения грин-карты</h1>
+        <p>Этот документ содержит простые пошаговые планы для ускорения процесса получения грин-карты США. Следуйте контрольному списку и стратегиям, подходящим для вашего типа заявления.</p>
+
+        <!-- Plan 1: Employer-Sponsored -->
+        <h2>1. Визы, спонсируемые работодателем (EB-2 и EB-3)</h2>
+        <div class="timeline">⏳ Целевые сроки: Сокращены с 2-4 лет до 1.5-2 лет (без учета очередей по квотам)</div>
+        
+        <div class="country-strategy">
+            <strong>🌍 Стратегия по стране рождения:</strong> Если вы родились в Индии или Китае, ожидание визы может занять несколько лет. Однако, если ваш супруг/супруга родился в стране без очередей, вы можете использовать <strong>Перенос квоты (Cross-Chargeability)</strong>, чтобы обойти очередь и использовать более короткое время ожидания страны супруга.
+        </div>
+
+        <h3>Последовательные шаги</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Шаг 1: Трудовая сертификация PERM</div>
+                Ваш работодатель доказывает, что для вашей работы нет доступных работников в США. (Этот этап нельзя ускорить).
+            </div>
+            <div class="step">
+                <div class="step-title">Шаг 2: Петиция по форме I-140</div>
+                Ваш работодатель подает заявление на ваш иммиграционный статус. <strong>(Здесь мы ускоряем процесс)</strong>.
+            </div>
+            <div class="step">
+                <div class="step-title">Шаг 3: Смена статуса по форме I-485</div>
+                Финальное заявление на грин-карту. Подается, когда подходит ваша приоритетная дата.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Контрольный список действий</p>
+            <label><input type="checkbox"> Проверьте страну рождения вашего супруга(и), чтобы узнать, можете ли вы использовать Перенос квоты.</label>
+            <label><input type="checkbox"> Попросите работодателя/отдел кадров подать <strong>Форму I-907 (Premium Processing)</strong> для вашей I-140.</label>
+            <label><input type="checkbox"> Если работодатель не хочет платить пошлину за ускорение ($2,965), предложите оплатить её самостоятельно.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Рекомендация: Запрос на ускоренную обработку</h4>
+            <p>Отправьте это точное письмо (на английском) вашему менеджеру или в отдел кадров, чтобы запросить ускоренную обработку за 15 дней:</p>
+            <div class="email-template">Subject: Request to upgrade my I-140 to Premium Processing
+
+Dear [Имя менеджера/HR],
+
+I am checking on my green card application (Form I-140). Because standard processing is taking many months, I would like to request that we upgrade my application to Premium Processing (Form I-907). 
+
+This guarantees a decision in 15 days, allowing me to focus entirely on my work. If the company cannot cover the government fee, I am willing to pay it myself. Please let me know how we can coordinate this with our lawyers.
+
+Thank you,
+[Ваше имя]</div>
+        </div>
+
+        <hr>
+
+        <!-- Plan 2: Self-Sponsored -->
+        <h2>2. Самостоятельные рабочие визы (EB-1A и NIW)</h2>
+        <div class="timeline">⏳ Целевые сроки: Сокращены с 1-2 лет до 6-8 месяцев</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Стратегия по стране рождения:</strong> Для заявителей из стран с большими очередями (Индия/Китай) получение категории EB-1A является лучшим способом ускорения, полностью обходящим длинные очереди EB-2/EB-3. Для заявителей из "остального мира" виза обычно доступна сразу.
+        </div>
+
+        <h3>Последовательные шаги</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Шаг 1: Сбор доказательств</div>
+                Соберите доказательства ваших выдающихся способностей или проекта национальных интересов.
+            </div>
+            <div class="step">
+                <div class="step-title">Шаг 2: Одновременная подача (Шаг ускорения)</div>
+                Подайте I-140, I-485 и I-907 (Premium Processing) одновременно.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Контрольный список действий</p>
+            <label><input type="checkbox"> Подайте <strong>Форму I-907 Premium Processing</strong> одновременно с I-140, чтобы получить ответ за 15-45 дней.</label>
+            <label><input type="checkbox"> Проверьте Визовый бюллетень: если ваша категория «Текущая» (C), отправьте финальную форму I-485 в том же пакете, что и I-140.</label>
+            <label><input type="checkbox"> <strong>Проверка подписей 2026:</strong> Проверьте каждую подпись черными чернилами. С июля 2026 года USCIS будет мгновенно отклонять целые пакеты из-за недействительных или сгенерированных подписей.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Рекомендация: Избегайте мгновенных отказов</h4>
+            <p>Поскольку вы сами контролируете свое заявление, самая большая задержка - это административная ошибка. Перед отправкой физически убедитесь, что каждая форма является самой последней версией и подписана вручную.</p>
+        </div>
+
+        <hr>
+
+        <!-- Plan 3: Family-Sponsored -->
+        <h2>3. Семейные визы (Ближайшие родственники)</h2>
+        <div class="timeline">⏳ Целевые сроки: Сокращены с 12-18 месяцев до 8-10 месяцев</div>
+
+        <div class="country-strategy">
+            <strong>🌍 Стратегия по стране рождения:</strong> Отличные новости! Квоты по странам <strong>не применяются</strong> к супругам, родителям или несовершеннолетним детям граждан США. Независимо от вашей страны рождения, очереди на ожидание нет.
+        </div>
+
+        <h3>Последовательные шаги</h3>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-title">Шаг 1: Раннее прохождение медосмотра</div>
+                Пройдите медицинский осмотр до подачи каких-либо документов.
+            </div>
+            <div class="step">
+                <div class="step-title">Шаг 2: Одновременная подача "в один шаг"</div>
+                Подайте семейную петицию (I-130) и заявление на грин-карту (I-485) вместе.
+            </div>
+        </div>
+
+        <div class="checklist">
+            <p class="checklist-title">☑️ Контрольный список действий</p>
+            <label><input type="checkbox"> Заполните <strong>Форму I-693 (Медицинский осмотр)</strong> у одобренного USCIS врача и получите запечатанный конверт.</label>
+            <label><input type="checkbox"> Соберите все переведенные гражданские документы (свидетельство о рождении, браке). Любой документ не на английском языке должен иметь заверенный перевод.</label>
+            <label><input type="checkbox"> Поместите запечатанный медицинский конверт и все формы (I-130, I-485, I-765, I-131) в <strong>одну коробку для отправки</strong>.</label>
+        </div>
+
+        <div class="suggestion">
+            <h4 class="suggestion-title">💡 Рекомендация: "Предварительная загрузка" - единственный путь</h4>
+            <p>Вы не можете купить Premium Processing для семейных грин-карт. Единственный способ ускорить процесс — предоставить идеальный пакет документов. Если вы забудете медицинский осмотр, USCIS выдаст «Запрос доказательств» (RFE), что приостановит ваше дело и отложит получение грин-карты на 2-3 месяца.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
