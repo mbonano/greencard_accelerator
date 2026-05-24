@@ -14,7 +14,7 @@ Start up the app:
 
     $ ./gacc start
 
-Then navigate to http://localhost:8080/
+Then navigate to http://localhost:8081/
 
 To tail app logs, run the following:
 
