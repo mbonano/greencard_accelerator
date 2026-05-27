@@ -5,3 +5,8 @@ services:
       - "8081:80"
     volumes:
       - .:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gacc.rule=Host(`gacc.chazmar.com`)"
+      - "traefik.http.routers.gacc.entrypoints=websecure"
+      - "traefik.http.routers.gacc.tls.certresolver=letsencrypt"
